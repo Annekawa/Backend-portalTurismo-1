@@ -2,8 +2,8 @@ const sequelize = require('./config/db');
 require('dotenv').config();
 const express = require('express')
  
-const userRoutes = require('./routes/userRouter')
-const contactRoutes = require('./routes/contactRouter')
+const userRoutes = require('./routes/userRoutes')
+const contactRoutes = require('./routes/contactRoutes')
  
 const app = express();
  
