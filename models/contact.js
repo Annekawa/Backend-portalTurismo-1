@@ -41,3 +41,4 @@ const Contact = sequelize.define('Contact', {
  
 // Exporta o modelo para ser utilizado em outras partes da aplicação
 module.exports = Contact;
+ 

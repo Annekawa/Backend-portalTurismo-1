@@ -8,15 +8,6 @@ exports.createContact = async (req, res) => {
             return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
         }
  
-
-exports.createContact = async (req, res) => {
-    try {
-        const { name, email, message } = req.body;
-
-        if (!name || !email || !message) {
-            return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
-        }
-
         const contact = await Contact.create({ name, email, message });
         res.status(201).json(contact);
     } catch (error) {
@@ -25,8 +16,6 @@ exports.createContact = async (req, res) => {
 }
  
  
-
-
 exports.listContacts = async (_req, res) => {
     try {
         const contacts = await Contact.findAll();
