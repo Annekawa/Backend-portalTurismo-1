@@ -23,6 +23,7 @@ app.use('/api/users', userRoutes)
 app.use('/api/contact', contactRoutes)
 app.use('/api/auth', authRoutes)
  
+
 const PORT = process.env.PORT;
  
 sequelize.authenticate()

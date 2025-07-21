@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const User = require('../models/Users');
  
+
 exports.createUser = async (req, res) => {
     try {
       const { name, email, password } = req.body;
@@ -31,6 +32,7 @@ exports.createUser = async (req, res) => {
     }
   }
  
+
 exports.listUser = async (_req, res) => {
     try {
       const users = await User.findAll({
@@ -42,6 +44,7 @@ exports.listUser = async (_req, res) => {
     }
   }
  
+
 exports.listUserById = async (req, res) => {
     try {
       const user = await User.findByPk(req.params.id, {
@@ -58,6 +61,7 @@ exports.listUserById = async (req, res) => {
     }
   }
  
+
 exports.updateUser = async (req, res) => {
     try {
       const { name, email, password } = req.body;
@@ -102,6 +106,7 @@ exports.updateUser = async (req, res) => {
     }
   }
  
+
 exports.deleteUser = async (req, res) => {
     try {
       const user = await User.findByPk(req.params.id);
