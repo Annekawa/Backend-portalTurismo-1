@@ -5,7 +5,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
  
 // Define o modelo de Usuário (User)
-const User = sequelize.define('User', {
+const user = sequelize.define('user', {
   // Campo ID: chave primária, número inteiro e autoincrementável
   id: {
     type: DataTypes.INTEGER,       // Tipo número inteiro
@@ -41,4 +41,4 @@ const User = sequelize.define('User', {
 });
  
 // Exporta o modelo para ser utilizado em outras partes da aplicação
-module.exports = User;
+module.exports = user;
