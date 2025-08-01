@@ -8,7 +8,7 @@ exports.createContact = async (req, res) => {
             return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
         }
  
-        const contact = await Contact.create({ name, email, message });
+        const contact=await Contact.create({ name, email, message });
         res.status(201).json(contact);
     } catch (error) {
         res.status(500).json({ message: 'Erro interno do servidor.', error });
@@ -16,9 +16,9 @@ exports.createContact = async (req, res) => {
 }
  
  
-exports.listContacts = async (_req, res) => {
+exports.listContacts=async (_req, res) => {
     try {
-        const contacts = await Contact.findAll();
+        const contacts=await Contact.findAll();
         res.json(contacts);
     } catch (error) {
         res.status(500).json({ message: 'Erro interno do servidor.', error });
